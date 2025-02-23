@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+  <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tb3_hw_interface">
+
+    <!-- Main robot structure -->
+    <xacro:include filename="$(find tb3_description)/urdf/turtlebot3_burger.urdf" />
+
+    <!-- Hardware interfacing with ros2 control -->
+    <xacro:include filename="$(find tb3_hw_interface)/urdf/tb3_ros2_control.urdf.xacro" />
+
+</robot>

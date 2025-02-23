@@ -1,0 +1,9 @@
+<library path="tb3_hw_interface">
+  <class name="tb3_hw_interface/Tb3SystemHardware"
+         type="tb3_hw_interface::Tb3SystemHardware"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>
+      Modified Diffbot package from ros2 control demos to facilitate use of turtlebot3 system that uses diff_drive_controller
+    </description>
+  </class>
+</library>

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <ros2_control name="tb3_hw_interface" type="system">
+
+      <hardware>
+        <plugin>tb3_hw_interface/Tb3SystemHardware</plugin>
+        <param name="left_wheel_name">wheel_left_joint</param>
+        <param name="right_wheel_name">wheel_right_joint</param>
+        <param name="device">/dev/ttyUSB0</param>
+        <param name="baud_rate">115200</param>
+        <param name="timeout_ms">100</param>
+        <param name="enc_counts_per_rev">500</param>
+      </hardware>
+
+      <joint name="wheel_left_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+      
+      <joint name="wheel_right_joint">
+        <command_interface name="velocity"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+    </ros2_control>
+
+</robot>
