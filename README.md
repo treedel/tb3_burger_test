@@ -2,6 +2,13 @@
 
 Testing ros2 implementation of a turtlebot3-burger based robot.
 
+## Usage
+- Clone the repo inside of a workspace
+- Change the parameters in urdf/tb3_ros2_control.urdf.xacro to connect with appropriate hardware
+- Perform colcon build and run the following commands to test it out
+    1) ros2 launch ros2_control_demo_example_2 tb3_hw.launch.py
+    2) ros2 run teleop_twist_keyboard teleop_twist_keyboard cmd_vel:=/tb3_base_controller/cmd_vel --ros-args -p stamped:=true
+
 ## Todo
 - [x] Obtain robot description
 - [x] Implement basic hardware control with ESP32

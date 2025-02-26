@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-    <ros2_control name="tb3_hw_interface" type="system">
+    <ros2_control name="ros2_control_demo_example_2" type="system">
 
       <hardware>
-        <plugin>tb3_hw_interface/Tb3SystemHardware</plugin>
+        <plugin>ros2_control_demo_example_2/DiffBotSystemHardware</plugin>
         <param name="left_wheel_name">wheel_left_joint</param>
         <param name="right_wheel_name">wheel_right_joint</param>
         <param name="device">/dev/ttyUSB0</param>

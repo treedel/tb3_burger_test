@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
 
 def generate_launch_description():
-    package_name = 'tb3_hw_interface'
+    package_name = 'ros2_control_demo_example_2'
     package_share = FindPackageShare(package=package_name).find(package_name)
 
     urdf_filename = 'tb3_hw.urdf.xacro'
@@ -44,7 +44,11 @@ def generate_launch_description():
         package="controller_manager",
         executable="ros2_control_node",
         parameters=[robot_controllers],
-        output="screen",
+        output="both",
+        remappings=[
+            ("~/robot_description", "/robot_description"),
+            ("/diffbot_base_controller/cmd_vel", "/cmd_vel"),
+        ],
     )
 
     joint_state_broadcaster_spawner = Node(
